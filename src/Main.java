@@ -12,9 +12,11 @@ public class Main {
         System.out.println();
 
         //Salas
-        Sala sala1 = new Sala(100, true);
-        Sala sala2 = new Sala(0, true); // No usable (sin capacidad)
-        Sala sala3 = new Sala(50, false); // No usable (no en funcionamiento)
+        Sala sala1 = new Sala(26, true,34);
+        Sala sala2 = new Sala(0, true,50); // No usable (sin capacidad)
+        Sala sala3 = new Sala(50, false,12); // No usable (no en funcionamiento)
+        Sala sala4 = new Sala(34, true,42);
+        Sala sala5 = new Sala(56, true,23);
         System.out.println(sala1.esUsable());
         System.out.println(sala2.esUsable());
         System.out.println(sala3.esUsable());
@@ -29,11 +31,11 @@ public class Main {
         Cliente pedro = new Cliente(true);
 
         //Entradas
-        Entrada2D entradaElExorcista2D = new Entrada2D(elExorcista);
-        Entrada3D entradaElGrinch3D = new Entrada3D(elGrinch);
-        Entrada2D entradaSAW2D = new Entrada2D(saw);
-        Entrada3D entradaElSenorDeLosAnillos3D = new Entrada3D(elSenorDeLosAnillos);
-        Entrada2D entradaHarryPotter2D = new Entrada2D(harryPotter);
+        Entrada2D entradaElExorcista2D = new Entrada2D(elExorcista,sala1);
+        Entrada3D entradaElGrinch3D = new Entrada3D(elGrinch,sala4);
+        Entrada2D entradaSAW2D = new Entrada2D(saw,sala3);
+        Entrada3D entradaElSenorDeLosAnillos3D = new Entrada3D(elSenorDeLosAnillos,sala2);
+        Entrada2D entradaHarryPotter2D = new Entrada2D(harryPotter,sala5);
 
         //Calcular Precios por Cliente
         System.out.println(entradaElExorcista2D.calcularPrecio(juan)); // 5000

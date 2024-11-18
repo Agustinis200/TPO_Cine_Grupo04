@@ -2,8 +2,8 @@ public class Entrada3D extends Entrada{
 
     private float precioAdicional = 1000;
 
-    public Entrada3D(Pelicula unaPelicula) {
-        super(unaPelicula);
+    public Entrada3D(Pelicula unaPelicula, Sala unaSala) {
+        super(unaPelicula, unaSala);
     }
 
     @Override
@@ -24,6 +24,6 @@ public class Entrada3D extends Entrada{
         // Llamar a calcularPrecio() para obtener el precio calculado y mostrar la info
         float precioFinal = calcularPrecio(new Cliente(false)); // Pasa un cliente para el cálculo
         float precioFinalParaSocio = calcularPrecio(new Cliente(true)); // Pasa un cliente para el cálculo
-        return "Entrada 3D para: " + getPelicula().getTitulo() + ", Precio: " + precioFinal + ", Precio para Socios: " + precioFinalParaSocio;
+        return "Entrada 3D para: " + getPelicula().getTitulo() + ", Sala: " + getSala().getNumeroDeSala() +  ", Precio: " + precioFinal + ", Precio para Socios: " + precioFinalParaSocio;
     }
 }

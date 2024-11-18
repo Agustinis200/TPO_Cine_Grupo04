@@ -1,7 +1,7 @@
 public class Entrada2D extends Entrada {
 
-    public Entrada2D(Pelicula unaPelicula) {
-        super(unaPelicula);
+    public Entrada2D(Pelicula unaPelicula, Sala unaSala) {
+        super(unaPelicula, unaSala);
     }
 
     @Override
@@ -22,6 +22,6 @@ public class Entrada2D extends Entrada {
         // Llamar a calcularPrecio() para obtener el precio calculado y mostrar la info
         float precioFinal = calcularPrecio(new Cliente(false)); // Pasa un cliente para el cálculo
         float precioFinalParaSocio = calcularPrecio(new Cliente(true)); // Pasa un cliente para el cálculo
-        return "Entrada 2D para: " + getPelicula().getTitulo() + ", Precio: " + precioFinal + ", Precio para Socios: " + precioFinalParaSocio;
+        return "Entrada 2D para: " + getPelicula().getTitulo() + ", Sala: " + getSala().getNumeroDeSala() + ", Precio: " + precioFinal + ", Precio para Socios: " + precioFinalParaSocio;
     }
 }
