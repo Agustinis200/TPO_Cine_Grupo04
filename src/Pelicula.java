@@ -1,4 +1,4 @@
-public class Pelicula {
+public class Pelicula implements Visualizable{
 
     private String titulo;
     private TipoGenero genero;
@@ -15,5 +15,10 @@ public class Pelicula {
 
     public boolean sosFestiva() {
         return genero.equals(TipoGenero.NAVIDENA);
+    }
+
+    @Override
+    public String mostrarInformacion() {
+        return "Pelicula: " + titulo + ", Genero: " + genero;
     }
 }
